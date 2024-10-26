@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Personnel - Manal</title>
+    <link rel="stylesheet" href="style14.css">
+</head>
+<body>
+    <header>
+    
+        <nav>
+            <ul>
+                <li><a href="#about">À propos de moi</a></li>
+                <li><a href="#hobbies">Hobbies et Objectifs</a></li>
+                <li><a href="#friends">Tableau d'Amis</a></li>
+                <li><a href="#contact">Contactez-moi</a></li>
+            </ul>
+        </nav>
+      
+    </header>
+    
+    <section id="about"> 
+         <h1>Naaim Manal</h1>
+        <h2>À propos de moi</h2>
+        <p>Je m'appelle Naaim Manal, étudiante en 1ère année cycle ingénierie en informatique à l'EMSI.</p>
+        <img src="c:\Users\hp\Documents\photos\profil.jfif" alt="Mon image" width="200" height="200">
+    </section>
+
+    <section id="hobbies">
+        <h2>Hobbies et Objectifs</h2>
+        <ul>
+            <li>Programmation</li>
+            <li>Lecture</li>
+            <li>Voyage</li>
+        </ul>
+        <p>Mon objectif cette année est de perfectionner mes compétences en programmation et de contribuer à des projets innovants.</p>
+    </section>
+
+    <section id="friends">
+        <h2>Tableau d'Amis</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Âge</th>
+                    <th>Ville</th>
+                    <th>Profil</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Yassmine</td>
+                    <td>20</td>
+                    <td>Casablanca</td>
+                    <td><a href="#">Voir Profil</a></td>
+                </tr>
+                <tr>
+                    <td>Salma</td>
+                    <td>20</td>
+                    <td>Casablanca</td>
+                    <td><a href="#">Voir Profil</a></td>
+                </tr>
+                <tr>
+                    <td>Ali</td>
+                    <td>20</td>
+                    <td>Casablanca</td>
+                    <td><a href="#">Voir Profil</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="contact">
+        <h2>Contactez-moi</h2>
+        <form id="contactForm" onsubmit="return validateForm()">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <script src="function.js"></script>
+</body>
+</html>
