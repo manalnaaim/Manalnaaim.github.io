@@ -10,7 +10,6 @@
 <h1>Sélectionnez vos produits</h1>
     <form method="POST" action="">
         <?php
-        // Génération des cases à cocher pour chaque produit
         foreach ($produits as $nom => $prix) {
             echo "<label>";
             echo "<input type='checkbox' name='produits[]' value='$nom'> $nom - $prix €";
@@ -21,7 +20,7 @@
 
     </form>
 <?php
-// Tableau des produits
+
 $produits = array(
     "Produit 1" => 15,
     "Produit 2" => 73,
@@ -29,7 +28,6 @@ $produits = array(
     "Produit 4" => 50
 );
 
-// Si le formulaire a été soumis
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $produitsSelectionnes = $_POST['produits'] ?? []; // Produits cochés
     $prixTotal = 0; // Initialisation du prix total
@@ -47,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "<p>Aucun produit sélectionné.</p>";
     }
     echo "<a href='index.php'>Retour</a>";
-    exit; // Stoppe l'exécution après avoir affiché les résultats
+    exit; 
 }
 ?>
 
