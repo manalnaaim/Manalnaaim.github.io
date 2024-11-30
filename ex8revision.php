@@ -1,3 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sélection de Produits</title>
+</head>
+<body>
+    
+<h1>Sélectionnez vos produits</h1>
+    <form method="POST" action="">
+        <?php
+        // Génération des cases à cocher pour chaque produit
+        foreach ($produits as $nom => $prix) {
+            echo "<label>";
+            echo "<input type='checkbox' name='produits[]' value='$nom'> $nom - $prix €";
+            echo "</label><br>";
+        }
+        ?>
+        <button type="submit">Valider</button>
+
+    </form>
 <?php
 // Tableau des produits
 $produits = array(
@@ -28,25 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     exit; // Stoppe l'exécution après avoir affiché les résultats
 }
 ?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sélection de Produits</title>
-</head>
-<body>
-    <h1>Sélectionnez vos produits</h1>
-    <form method="POST" action="">
-        <?php
-        // Génération des cases à cocher pour chaque produit
-        foreach ($produits as $nom => $prix) {
-            echo "<label>";
-            echo "<input type='checkbox' name='produits[]' value='$nom'> $nom - $prix €";
-            echo "</label><br>";
-        }
-        ?>
-        <button type="submit">Valider</button>
-    </form>
+
+    
 </body>
 </html>
